@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubic 4</title>
+    <!--this links to my external style sheet-->
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div id="mainWrapper" class="main">
+        <header id=title>
+            <h1>My Practice Webpage</h1>
+            <p>Event Handlers</p>
+
+        </header>
+
+        <nav id="navBar" class="navBar">
+            <ul id="navList">
+                <li class="menuItem"><a href="#">Home</a></li>
+                <li class="menuItem"><a href="#">About Me</a></li>
+                <li class="menuItem"><a href="#">Contact Info</a></li>
+            </ul>
+    
+        </nav>
+
+        <form>
+            <input type="button" value="Click Here" onclick="alert('Yeah, you clicked the button');">
+        </form>
+
+        <a href="https://www.google.com/" target="_blank" onmouseover="setAttribute('style' , 'color: red');">Google Website</a>
+
+
+        <div id="math">
+            <h3>The Math Section</h3>
+            <p><input id="numOne">+<input id="numTwo"></p>
+            <p id="sum"></p>
+        </div>
+
+        <div id="pictures">
+            <ul>
+                <li><a data-img="carolinaWren" id="wren" href="#">Carolina Wren</a></li>
+                <li><a data-img="blueBird" id="bBird" href="#">Blue Bird</a></li>
+
+            </ul>
+
+            <img class="hide" id="carolinaWren" src="assets/carollinaWren2.jpg">
+
+        </div>
+
+
+
+
+
+
+    </div> <!--mainWrapper-->
+    
+</body>
+ <!--this links to my javascript page-->
+ <script src="js/myScript.js"></script>
+</html>
