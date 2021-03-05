@@ -1,12 +1,78 @@
-.main {
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap");
+body {
   background-color: ivory;
+}
+
+body header {
+  height: 100px;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px;
+      grid-template-rows: 80px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  background-color: #d75c37;
+}
+
+body header h1 {
+  height: 80px;
+  width: 1fr;
+  font-family: "Courgette", cursive;
+  font-size: 2rem;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+body header h1 p {
+  height: auto;
+  text-align: center;
+}
+
+body .navBar {
+  height: 50px;
+  width: 100%;
+}
+
+body .navBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .navBar ul li {
+  padding: 15px;
+  list-style: none;
+  color: black;
+}
+
+body .navBar ul li a {
+  text-decoration: none;
+}
+
+body .content {
+  gap: 15px;
+  height: 450px;
+  width: 100%;
+  margin: 40px 0px 20px 0px;
+  background-color: ivory;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px auto auto 90px;
+      grid-template-rows: 100px auto auto 90px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "math" "form" "pictures" "footer";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -15,7 +81,93 @@
           align-items: center;
 }
 
-.hide {
+body .content .math {
+  height: 100px;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: math;
+  text-align: center;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #4e565c;
+}
+
+body .content .inputForm {
+  height: 90px;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: form;
+  text-align: center;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #4e565c;
+}
+
+body .content .pictures {
+  height: 300px;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: pictures;
+  text-align: center;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #4e565c;
+}
+
+body .content .pictures ul {
+  list-style: none;
+  text-align: center;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body .content .pictures ul a {
+  text-decoration: none;
+  color: white;
+}
+
+body .content .hide {
   display: none;
+}
+
+body footer {
+  height: 90px;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 5px;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  text-align: center;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  background-color: #d75c37;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer P {
+  margin: 15px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body id="page">
     <div id="mainWrapper" class="main">
         <header id=title>
             <h1>My Practice Webpage</h1>
@@ -27,20 +27,19 @@
     
         </nav>
 
-        <form>
-            <input type="button" value="Click Here" onclick="alert('Yeah, you clicked the button');">
-        </form>
-
-        <a href="https://www.google.com/" target="_blank" onmouseover="setAttribute('style' , 'color: red');">Google Website</a>
-
-
-        <div id="math">
+        <div class="content">
+        
+        <section id="math" class="math">
             <h3>The Math Section</h3>
             <p><input id="numOne">+<input id="numTwo"></p>
             <p id="sum"></p>
-        </div>
+        </section>
 
-        <div id="pictures">
+        <form id="inputForm" class="inputForm">
+            <input type="button" value="Click Here" onclick="alert('Yeah, you clicked the button');">
+        </form>
+
+        <section id="pictures" class="pictures">
             <ul>
                 <li><a data-img="carolinaWren" id="wren" href="#">Carolina Wren</a></li>
                 <li><a data-img="blueBird" id="bBird" href="#">Blue Bird</a></li>
@@ -48,9 +47,17 @@
             </ul>
 
             <img class="hide" id="carolinaWren" src="assets/carollinaWren2.jpg">
+            <img class="hide" id="blueBird" src="assets/blueBird2-2.jpg">
 
-        </div>
+        </section>
 
+        <footer id="footer">
+            <p id="time"></p>
+            <p id="copywrite">&copy; TMR Web Practice Project</p>   
+    
+        </footer>
+
+        </div> <!--content-->
 
 
 

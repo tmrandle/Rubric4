@@ -1,11 +1,160 @@
-.main{
-    background-color: ivory;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
 
-.hide{
-    display: none;
-}
+// @import "./vendor/normalize";
+@import "./partials/_colors";
+@import "./partials/_typography";
+
+// .main{
+//     background-color: ivory;
+//     display: flex;
+//     flex-flow: column nowrap;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+body{
+    background-color: $backgroundColor;
+   
+    header{
+        height: 100px;
+        width: 100%;
+        margin: 0px 0px 5px 0px;
+        display: grid;
+        grid-template-rows: 80px;
+        grid-template-columns: 1fr;
+        background-color: $headerBackColor;
+
+        h1{
+           height: 80px;
+           width: 1fr;
+           font-family: $headerFont; 
+           font-size: $headerFontSize;
+           color: $lightText;
+           text-align: center;
+           p{
+               height: auto;
+               text-align: center;
+           }
+        }
+
+        // h2{
+        //     height: auto;
+        //     background-color: $headerBackColor;
+        //     color: $lightText;
+        //     text-align: center;
+
+        // }
+    }
+
+    .navBar{
+        height: 50px;
+        width: 100%;
+        ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        li{
+            padding: 15px;
+            list-style: none;
+            color: black;
+            a{
+            text-decoration: none;
+            }
+        }
+        }
+    }
+
+    .content{
+        gap: 15px;
+        height: 450px;
+        width: 100%;
+        margin: 40px 0px 20px 0px;
+        background-color: ivory;
+        display: grid;
+        grid-template-rows: 100px auto auto 90px;
+        grid-template-columns: 1fr;
+       
+      
+        grid-template-areas:
+         "math"
+         "form"
+         "pictures"
+         "footer";
+         justify-content: center;
+         align-items: center;
+
+        .math{
+            height: 100px;
+            width: 100%;
+            margin: 20px 0px;
+            padding: 10px;
+            grid-area: math;
+            text-align: center;
+            color: $lightText;
+            font-family: $bodyFont;
+            background-color: $bodyBackColor;
+                      
+         }
+
+         .inputForm{
+            height: 90px; 
+            width: 100%;
+            margin: 20px 0px;
+            padding: 10px;
+            grid-area: form;
+            text-align: center;
+            color: $lightText;
+            font-family: $bodyFont;
+            background-color: $bodyBackColor; 
+         }
+
+         .pictures{
+            height: 300px; 
+            width: 100%;
+            margin: 20px 0px;
+            padding: 10px;
+            grid-area: pictures;
+            text-align: center;
+            color: $lightText;
+            font-family: $bodyFont;
+            background-color: $bodyBackColor; 
+            ul{
+                list-style: none;
+                text-align: center;
+                color: $lightText;
+                font-family: $bodyFont;
+              a{
+                  text-decoration: none;
+                  color: white;
+              }
+            }
+            }
+            .hide{
+                display: none;
+            }
+         }
+
+         footer{
+             height: 90px;
+             width: 100%;
+             margin: 20px 0px;
+             padding: 5px;
+             grid-area: footer;
+             text-align: center;
+             color: $lightText;
+             font-family: $bodyFont;
+             font-size: 12px;
+             background-color: $headerBackColor;
+             display: flex;
+             flex-flow: row nowrap;
+             justify-content: center;
+             align-items: center;
+             P{
+                 margin: 15px;
+             }
+         }
+
+         
+
+    }
+
