@@ -16,7 +16,7 @@ body{
     background-color: $backgroundColor;
    
     header{
-        height: 100px;
+        height: 130px;
         width: 100%;
         margin: 0px 0px 5px 0px;
         display: grid;
@@ -25,42 +25,37 @@ body{
         background-color: $headerBackColor;
 
         h1{
-           height: 80px;
+           height: 60px;
            width: 1fr;
            font-family: $headerFont; 
            font-size: $headerFontSize;
            color: $lightText;
            text-align: center;
-           p{
-               height: auto;
-               text-align: center;
-           }
+        }
+        p{
+            height: auto;
+            text-align: center;
+            color: $lightText;
+            font-family: $bodyFont;
         }
 
-        // h2{
-        //     height: auto;
-        //     background-color: $headerBackColor;
-        //     color: $lightText;
-        //     text-align: center;
-
-        // }
     }
 
     .navBar{
         height: 50px;
         width: 100%;
         ul{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        li{
-            padding: 15px;
-            list-style: none;
-            color: black;
-            a{
-            text-decoration: none;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            li{
+                padding: 15px;
+                list-style: none;
+                color: black;
+                a{
+                text-decoration: none;
+                }
             }
-        }
         }
     }
 
@@ -71,10 +66,8 @@ body{
         margin: 40px 0px 20px 0px;
         background-color: ivory;
         display: grid;
-        grid-template-rows: 100px auto auto 90px;
+        grid-template-rows: 180px auto auto 90px;
         grid-template-columns: 1fr;
-       
-      
         grid-template-areas:
          "math"
          "form"
@@ -83,78 +76,88 @@ body{
          justify-content: center;
          align-items: center;
 
-        .math{
-            height: 100px;
-            width: 100%;
-            margin: 20px 0px;
-            padding: 10px;
-            grid-area: math;
-            text-align: center;
-            color: $lightText;
-            font-family: $bodyFont;
-            background-color: $bodyBackColor;
-                      
-         }
-
-         .inputForm{
-            height: 90px; 
-            width: 100%;
-            margin: 20px 0px;
-            padding: 10px;
-            grid-area: form;
-            text-align: center;
-            color: $lightText;
-            font-family: $bodyFont;
-            background-color: $bodyBackColor; 
-         }
-
-         .pictures{
-            height: 300px; 
-            width: 100%;
-            margin: 20px 0px;
-            padding: 10px;
-            grid-area: pictures;
-            text-align: center;
-            color: $lightText;
-            font-family: $bodyFont;
-            background-color: $bodyBackColor; 
-            ul{
-                list-style: none;
+            .math{
+                height: 180px;
+                width: 100%;
+                margin: 20px 0px;
+                padding: 10px;
+                grid-area: math;
                 text-align: center;
                 color: $lightText;
                 font-family: $bodyFont;
-              a{
-                  text-decoration: none;
-                  color: white;
-              }
+                line-height: 100%;
+                background-color: $bodyBackColor;
+                label{
+                    padding: 30px;
+                }
             }
-            }
-            .hide{
-                display: none;
-            }
-         }
 
-         footer{
-             height: 90px;
-             width: 100%;
-             margin: 20px 0px;
-             padding: 5px;
-             grid-area: footer;
-             text-align: center;
-             color: $lightText;
-             font-family: $bodyFont;
-             font-size: 12px;
-             background-color: $headerBackColor;
-             display: flex;
-             flex-flow: row nowrap;
-             justify-content: center;
-             align-items: center;
-             P{
-                 margin: 15px;
-             }
-         }
+            .inputForm{
+                height: 80px; 
+                width: 100%;
+                margin: 20px 0px;
+                padding: 10px;
+                grid-area: form;
+                text-align: center;
+                color: $lightText;
+                font-family: $bodyFont;
+                background-color: $bodyBackColor; 
+            }
 
+            .pictures{
+                height: 350px; 
+                width: 100%;
+                margin: 20px 0px;
+                padding: 10px;
+                grid-area: pictures;
+                text-align: center;
+                color: $lightText;
+                font-family: $bodyFont;
+                background-color: $bodyBackColor; 
+               
+                ul{
+                    padding: 10px;
+                    list-style: none;
+                    text-align: center;
+                    color: $lightText;
+                    font-family: $bodyFont;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            padding: 10px 20px 5px 10px;
+                            text-align: center;
+                        }//a
+                }//ul
+            
+                .hide{
+                    display: none;
+                }//hide
+            } //pictures
+
+            footer{
+                height: 90px;
+                width: 100%;
+                margin: 20px 0px;
+                padding: 5px;
+                grid-area: footer;
+                text-align: center;
+                color: $lightText;
+                font-family: $bodyFont;
+                font-size: 12px;
+                background-color: $headerBackColor;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                P{
+                    margin: 15px;
+                }
+            }
+    }//content
          
 
-    }
+}//body
 

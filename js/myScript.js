@@ -1,12 +1,12 @@
 var body = document.getElementById("page");
+var navBar;
+var liLinks;
 var numOne = document.getElementById("numOne");
 var numTwo = document.getElementById("numTwo");
 var addSum = document.getElementById("sum");
+var copy = document.getElementById("copy");
 var wren = document.getElementById("wren");
 var bBird = document.getElementById("bBird");
-var navBar;
-var liTag;
-var liLinks;
 var date = new Date();
 var weekDate = date.getDay();
 
@@ -21,8 +21,31 @@ function checkCookies() {
     }
     console.log(text);
 }
+//on load event, checking for cookies and console logging result
+body.addEventListener("load",checkCookies(), false);
 
-body.addEventListener("load",checkCookies(Event));
+//working with getElementById element in an variable named navBar
+navBar = document.getElementById("navBar");
+console.log(navBar.childNodes.length);
+navBar.setAttribute("align", "center");
+
+//working with getElementsByTagName
+liLinks = navBar.getElementsByTagName("a");
+console.log("Text of li link index 0 " + liLinks[0].text);
+for (let i = 0; i < liLinks.length; i++){
+liLinks[i].setAttribute("style", "color: blue");
+ }
+
+ //mouseover event for the nav links
+navList.addEventListener("mouseover", function(event){
+    //highlights the mouseover target red on mouseover
+    event.target.style.color = "red";
+    //reset the color after a timeout of 700
+    setTimeout(function(){
+        event.target.style.color ="blue";
+    }, 700);
+},false);
+
 
 function collectAndAdd() {
     let one = parseInt(numOne.value) || 0;
@@ -31,12 +54,19 @@ function collectAndAdd() {
     addSum.innerHTML = "Your sum is " + sum;
 }
 
+numOne.addEventListener("input", collectAndAdd, false);
+numTwo.addEventListener("input" , collectAndAdd, false);
 
-numOne.addEventListener("input", collectAndAdd);
-numTwo.addEventListener("input" , collectAndAdd);
+function copyAlert(){
+    alert('Thanks for copying the text!');
+}
+copy.addEventListener("copy", copyAlert, false);
 
-function showPic() {
+
+function showPic(e) {
     //to hide all the images on the page
+    e.preventDefault();
+
     var allPics = document.querySelectorAll("img");
 
     for (var i = 0; i < allPics.length; i++ ){
@@ -44,7 +74,7 @@ function showPic() {
     }
 
     console.log(this); //the this is the value of whatever was clicked--good for multiple items in a list
-    var picId = this.attributes["data-img"].value; //the value for the id from the item clicked is put into picId, uaing data-
+    var picId = this.attributes["data-img"].value; //the value for the id from the item clicked is put into picId, using data-img
     console.log(picId);
     var pic = document.getElementById(picId);
     
@@ -56,32 +86,10 @@ function showPic() {
     
 }
 
-wren.addEventListener("click", showPic);
-bBird.addEventListener("click", showPic);
+//click event for list items
+wren.addEventListener("click", showPic, false);
+bBird.addEventListener("click", showPic, false);
 
-//working with getElementById element in an variable named navBar
-navBar = document.getElementById("navBar");
-console.log(navBar.childNodes.length);
-navBar.setAttribute("align", "center");
-
-liTag = document.getElementsByTagName("li");
-console.log("Number of li links in menuItem " + liTag.length); 
-
-working with getElementsByTagName
-liLinks = navBar.getElementsByTagName("a");
-console.log("Text of li link index 0 " + liLinks[0].text);
-for (let i = 0; i < liLinks.length; i++){
-liLinks[i].setAttribute("style", "color: blue");
- }
-
-navList.addEventListener("mouseover", function(event){
-    //highlights the mouseover target red on mouseover
-    event.target.style.color = "red";
-    //reset the color after a timeout of 700
-    setTimeout(function(){
-        event.target.style.color ="blue";
-    }, 700);
-},false);
 
 //this displays the date on the page in the p with id="time"
 document.getElementById("time").innerHTML = "Today is " + (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear();
