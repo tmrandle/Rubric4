@@ -12,8 +12,8 @@
 
 <body id="page">
     <div id="mainWrapper" class="main">
-        <header id=title>
-            <h1>My Practice Webpage</h1>
+        <header>
+            <h1 id="title">My Practice Webpage</h1>
             <p>Event Handlers</p>
 
         </header>
@@ -32,6 +32,7 @@
         <section id="math" class="math">
             <h2>The Math Section</h2>
             <p>Enter your numbers to see the sum.</p>
+            <p>Note: if no number is entered, zero will be used</p>
             <label for="numOne">First Number</label>
             <label for="numTwo">Second Number</label>
             <p><input id="numOne">+<input id="numTwo"></p>
@@ -39,7 +40,7 @@
         </section>
 
         <form id="inputForm" class="inputForm">
-            <input type="button" value="A Random Button" onclick="alert('Yeah, you clicked the button');">
+            <input id ="btn" type="button" value="A Random Button">
             <p id="copy">Hey! Copy this text.</p>
         </form>
 

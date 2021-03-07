@@ -1,9 +1,11 @@
 var body = document.getElementById("page");
+var title = document.getElementById("title");
 var navBar;
 var liLinks;
 var numOne = document.getElementById("numOne");
 var numTwo = document.getElementById("numTwo");
 var addSum = document.getElementById("sum");
+var btn = document.getElementById("btn");
 var copy = document.getElementById("copy");
 var wren = document.getElementById("wren");
 var bBird = document.getElementById("bBird");
@@ -20,9 +22,20 @@ function checkCookies() {
         text = "Cookies are not enabled";
     }
     console.log(text);
+    alert(text);
 }
-//on load event, checking for cookies and console logging result
+//on load event, checking for cookies and console logging result and alert
 body.addEventListener("load",checkCookies(), false);
+
+function changeColor(e){
+    e.target.style.color = "blue";
+
+    setTimeout(function(){
+        e.target.style.color ="#f5f5f5";
+    }, 700);
+}
+
+title.addEventListener("mouseover", changeColor, false);
 
 //working with getElementById element in an variable named navBar
 navBar = document.getElementById("navBar");
@@ -57,6 +70,21 @@ function collectAndAdd() {
 numOne.addEventListener("input", collectAndAdd, false);
 numTwo.addEventListener("input" , collectAndAdd, false);
 
+function btnClick(){
+    
+    console.log("Yeah, you clicked the button.");
+
+    var btn = document.getElementById("btn");
+    if(btn.style.background == ""){
+        btn.style.background = "yellow";
+    }else{
+        btn.style.background = "";
+    }
+}
+
+btn.addEventListener("click", btnClick, false);
+
+
 function copyAlert(){
     alert('Thanks for copying the text!');
 }
@@ -64,9 +92,9 @@ copy.addEventListener("copy", copyAlert, false);
 
 
 function showPic(e) {
-    //to hide all the images on the page
+    //to keep it from going back to the top of the page
     e.preventDefault();
-
+    //to hide all the images on the page
     var allPics = document.querySelectorAll("img");
 
     for (var i = 0; i < allPics.length; i++ ){

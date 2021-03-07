@@ -3,14 +3,6 @@
 @import "./partials/_colors";
 @import "./partials/_typography";
 
-// .main{
-//     background-color: ivory;
-//     display: flex;
-//     flex-flow: column nowrap;
-//     justify-content: center;
-//     align-items: center;
-// }
-
 
 body{
     background-color: $backgroundColor;
@@ -20,17 +12,19 @@ body{
         width: 100%;
         margin: 0px 0px 5px 0px;
         display: grid;
-        grid-template-rows: 80px;
+        grid-template-rows: 60px 30px;
         grid-template-columns: 1fr;
         background-color: $headerBackColor;
+        justify-content: center;
+        align-content: center;
 
         h1{
            height: 60px;
-           width: 1fr;
+           width: 350;
            font-family: $headerFont; 
            font-size: $headerFontSize;
            color: $lightText;
-           text-align: center;
+           justify-self: center;
         }
         p{
             height: auto;
@@ -66,7 +60,7 @@ body{
         margin: 40px 0px 20px 0px;
         background-color: ivory;
         display: grid;
-        grid-template-rows: 180px auto auto 90px;
+        grid-template-rows: 200px auto auto 90px;
         grid-template-columns: 1fr;
         grid-template-areas:
          "math"
@@ -77,7 +71,7 @@ body{
          align-items: center;
 
             .math{
-                height: 180px;
+                height: 200px;
                 width: 100%;
                 margin: 20px 0px;
                 padding: 10px;
@@ -85,7 +79,7 @@ body{
                 text-align: center;
                 color: $lightText;
                 font-family: $bodyFont;
-                line-height: 100%;
+                line-height: 75%;
                 background-color: $bodyBackColor;
                 label{
                     padding: 30px;
